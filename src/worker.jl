@@ -27,11 +27,11 @@ function next_iteration!{T<:AbstractFloat,N<:Integer}(centres::AbstractArray{T,2
   fill!(sums, zero(eltype(sums)))
   fill!(counts, zero(eltype(counts)))
   for i in n_range
-    rec = sub(data, :, i)
+    rec = view(data, :, i)
     l_dist = typemax(eltype(data))
     currentAssignment = 0
     for j = k_range
-      ctr = sub(centres, :, j)
+      ctr = view(centres, :, j)
       c_dist = zero(T)
       @simd for I = eachindex(rec,ctr)
          @inbounds reci = rec[I]
@@ -43,7 +43,7 @@ function next_iteration!{T<:AbstractFloat,N<:Integer}(centres::AbstractArray{T,2
     end
     @inbounds assignments[i] = currentAssignment
     current_col = rec
-    current_sum = sub(sums, :, currentAssignment)
+    current_sum = view(sums, :, currentAssignment)
     for row = eachindex(current_col,current_sum)
        @inbounds current_sum[row] += current_col[row]
     end

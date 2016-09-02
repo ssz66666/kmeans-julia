@@ -52,11 +52,11 @@ function next_iteration{T<:AbstractFloat,N<:Integer}(centres::Array{T, 2},
                         counts::Array{N, 1},
                         k::N, d::N, n::N)
   for i in n
-    rec = sub(data, :, i)
+    rec = view(data, :, i)
     l_dist = typemax(eltype(data))
     currentAssignment = 0
     for j = 1 : k
-      ctr = sub(centres, :, j)
+      ctr = view(centres, :, j)
       c_dist = zero(Float64)
       @simd for I = eachindex(rec,ctr)
          @inbounds reci = rec[I]
@@ -68,15 +68,15 @@ function next_iteration{T<:AbstractFloat,N<:Integer}(centres::Array{T, 2},
     end
     @inbounds assignments[i] = currentAssignment
     current_col = rec
-    current_sum = sub(sums, :, currentAssignment)
+    current_sum = view(sums, :, currentAssignment)
     @simd for row = eachindex(current_col,current_sum)
        @inbounds current_sum[row] += current_col[row]
     end
      @inbounds counts[currentAssignment] += 1
   end
   for ctr = 1 : k
-    t_ctr = sub(centres,:,ctr)
-    t_sums = sub(sums,:,ctr)
+    t_ctr = view(centres,:,ctr)
+    t_sums = view(sums,:,ctr)
     t_counts = counts[ctr]
     @simd for dim = eachindex(t_ctr,t_sums)
       @inbounds t_ctr[dim] = t_sums[dim] / t_counts
