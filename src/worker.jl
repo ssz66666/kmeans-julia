@@ -20,7 +20,7 @@ function next_iteration!{T<:AbstractFloat,N<:Integer}(centres::AbstractArray{T,2
   # data        'coordinates' of all original data points, d * n
   # dmat        the distance matrix, k * n
   # assignments the array of assignments for each data point, n
-  # sums, counts the arrays to store the returned 'sums' (d * k) and 'counts' (n) result as stated above.
+  # sums, counts the arrays to store the returned 'sums' (d * k) and 'counts' (k) result as stated above.
   # k_range     the range of 'k', i.e. previous centres points to be used.
   # n_range     the range of 'n', i.e. data points to be used
                         
@@ -33,7 +33,7 @@ function next_iteration!{T<:AbstractFloat,N<:Integer}(centres::AbstractArray{T,2
     for j = k_range
       ctr = view(centres, :, j)
       c_dist = zero(T)
-      @simd for I = eachindex(rec,ctr)
+      for I = eachindex(rec,ctr)
          @inbounds reci = rec[I]
          @inbounds ctri = ctr[I]
          c_dist += (reci - ctri) ^ 2
