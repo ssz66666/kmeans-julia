@@ -1,3 +1,6 @@
+# k-means julia implementation
+# Sizhe Sun ssz66666@gmail.com
+
 importall Distributed_Kmeans_Worker
 
 function kmeans{T<:AbstractFloat, N<:Integer}(data::Array{T, 2},
@@ -38,52 +41,37 @@ function get_next_centres!{T<:AbstractFloat,N<:Integer}(worker_set::Vector{N},
   fill!(counts,zero(eltype(counts)))
   prefs = Array{Future}(nw)
   for w = 1 : nw
-      #p_sum, p_count = remotecall_fetch(worker_set[w],next_iteration!, centres)
       prefs[w] = remotecall(next_iteration!, worker_set[w], centres)
   end
   for pref in prefs
     p_sum, p_count = fetch(pref)
-    sums += p_sum; counts += p_count
+    add_in_place(sums,p_sum);add_in_place(counts,p_count)
   end
-  for ctr = 1 : k
-    t_ctr = view(centres,:,ctr)
-    t_sums = view(sums,:,ctr)
-    t_counts = counts[ctr]
-    for dim = eachindex(t_ctr,t_sums)
-      @inbounds t_ctr[dim] = t_sums[dim] / t_counts
-    end
-  end
-  #print("one iteration complete for scheduler!")
+  sums_to_centres!(centres, sums, counts, 1:d, 1:k)
   return centres
 end
 
 function fetch_assignments{N<:Integer}(worker_set::Vector{N},
                                        assignments::Array{N, 1},
                                        dist::Vector{UnitRange{N}})
-  for (i,rg) = enumerate(dist)
-    #copy!(assignments, rg[1], remotecall_fetch(worker_set[i], get_assignments), 1)
-    copy!(assignments, rg[1], remotecall_fetch(get_assignments, worker_set[i]), 1)
+  for (i,range) = enumerate(dist)
+    #copy!(assignments, range[1], remotecall_fetch(worker_set[i], get_assignments), 1)
+    copy!(assignments, range[1], remotecall_fetch(get_assignments, worker_set[i]), 1)
   end
   return assignments
 end
 
-function dist_data{T<:AbstractFloat,N<:Integer}(m::AbstractMatrix{T},
-                                                worker_set::Vector{N},
+function dist_data{T<:AbstractFloat,N<:Integer}(m::AbstractArray{T,2},
+                                                worker_set::AbstractArray{N,1},
                                                 k::N)
   d, n = size(m)
   dist = Base.splitrange(n, length(worker_set))
   nw = length(dist)
-  for i = 1:nw
+  @sync for i = 1:nw
     p_data = view(m, :, dist[i])
     p_n = length(dist[i])
     #remotecall_wait(worker_set[i], init_dist_worker, p_data, k, d, p_n)
-    remotecall_wait(init_dist_worker, worker_set[i], p_data, k, d, p_n)
+    @async remotecall_wait(init_dist_worker, worker_set[i], p_data, k, d, p_n)
   end
   return nw, dist
-end
-
-
-
-function randomSelectCentroid(dataSet::AbstractArray{Float64}, k::Int)
-  return dataSet[1:end, randperm(size(dataSet,2))][1:end,1:k]
 end

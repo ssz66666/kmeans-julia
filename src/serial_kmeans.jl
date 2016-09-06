@@ -1,11 +1,11 @@
 module Serial_Kmeans
 
 # Naïve implementation of K-Means algorithm
-# v0.4
-# 孙斯哲 Sizhe Sun 2016-09-03
+# 孙斯哲 Sizhe Sun
 
 export kmeans
 
+include("utils.jl")
 include("worker.jl")
 
 function kmeans{T<:AbstractFloat,N<:Integer}(
@@ -32,7 +32,7 @@ function kmeans{T<:AbstractFloat,N<:Integer}(
   iter::N = 0
   while iter < iter_count
     next_iteration(centres, data, dmat,
-                                assignments, sums, counts, k, n)
+                                assignments, sums, counts, k, d, n)
     if test_convergence && ==(centres,prev_cents)
       break
     end
@@ -50,20 +50,9 @@ function next_iteration{T<:AbstractFloat,N<:Integer}(centres::Array{T, 2},
                         assignments::Array{N, 1},
                         sums::Array{T, 2},
                         counts::Array{N, 1},
-                        k::N, n::N)
+                        k::N, d::N, n::N)
   next_iteration!(centres, data, dmat, assignments, sums, counts, 1:k, 1:n)
-  for ctr = 1 : k
-    t_ctr = view(centres,:,ctr)
-    t_sums = view(sums,:,ctr)
-    t_counts = counts[ctr]
-    @simd for dim = eachindex(t_ctr,t_sums)
-      @inbounds t_ctr[dim] = t_sums[dim] / t_counts
-    end
-  end
-end
-
-function randomSelectCentroid(dataSet::AbstractArray{Float64}, k::Int)
-  return dataSet[1:end, randperm(size(dataSet,2))][1:end,1:k]
+  sums_to_centres!(centres, sums, counts, 1:d, 1:k)
 end
 
 end # end of module

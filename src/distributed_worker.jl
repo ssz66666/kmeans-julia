@@ -1,5 +1,10 @@
 module Distributed_Kmeans_Worker
 
+# Naïve implementation of K-Means algorithm,
+# with experimental parallel computing (multiple processes) support
+# the worker module
+# 孙斯哲 Sizhe Sun
+
 include("worker.jl")
 
 export next_iteration!, init_dist_worker, get_assignments

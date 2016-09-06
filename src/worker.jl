@@ -1,6 +1,5 @@
-# k-means julia implementation
+# k-means julia core implementation
 # Sizhe Sun ssz66666@gmail.com
-# 2016-09-03
 
 function next_iteration!{T<:AbstractFloat,N<:Integer}(centres::AbstractArray{T,2},
                         data::AbstractArray{T,2},
@@ -26,28 +25,29 @@ function next_iteration!{T<:AbstractFloat,N<:Integer}(centres::AbstractArray{T,2
                         
   fill!(sums, zero(eltype(sums)))
   fill!(counts, zero(eltype(counts)))
-  for i in n_range
-    rec = view(data, :, i)
-    l_dist = typemax(eltype(data))
-    currentAssignment = 0
-    for j = k_range
-      ctr = view(centres, :, j)
+  
+  d_range = Base.OneTo(size(data,1))
+  l_dist::T = typemax(T)
+  c_dist::T = zero(T)
+  currentAssignment::N = zero(N)
+  
+  for n in n_range
+    l_dist = typemax(T)
+    currentAssignment = zero(N)
+    for k in k_range
       c_dist = zero(T)
-      for I = eachindex(rec,ctr)
-         @inbounds reci = rec[I]
-         @inbounds ctri = ctr[I]
-         c_dist += (reci - ctri) ^ 2
+      for d in d_range
+        @inbounds c_dist += (data[d,n] - centres[d,k]) ^ 2
       end
-      @inbounds dmat[j,i] = c_dist
-      c_dist < l_dist && (l_dist = c_dist; currentAssignment = j)
+      dmat[k,n] = c_dist
+      c_dist < l_dist && (l_dist = c_dist; currentAssignment = k)
     end
-    @inbounds assignments[i] = currentAssignment
-    current_col = rec
-    current_sum = view(sums, :, currentAssignment)
-    for row = eachindex(current_col,current_sum)
-       @inbounds current_sum[row] += current_col[row]
+    @inbounds assignments[n] = currentAssignment
+    for d in d_range
+      @inbounds sums[d,currentAssignment] += data[d,n]
     end
     @inbounds counts[currentAssignment] += 1
   end
   return sums, counts
 end
+

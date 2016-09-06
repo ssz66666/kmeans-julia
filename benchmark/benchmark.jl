@@ -32,7 +32,7 @@ function clustering_benchmark{N<:Integer}(np::N,
   end
 end
 
-function build_tests{T<:AbstractString,N<:Integer}(files::Vector{T},ks::Vector{N},config)
+function build_tests{T<:AbstractString,N<:Integer}(files::AbstractArray{T,1},ks::AbstractArray{N,1},config)
 
   if !(length(files)==length(ks))  error("invalid args") end
   tests = Array(TestCase, (0...))
@@ -92,3 +92,4 @@ config = Dict((MyClusteringAlg()=>args))
 load_init()
 testpackages = build_tests(tests,ks,config)
 run() = clustering_benchmark(np, init_data, init_all_data, func_name, MyClusteringAlg(), testpackages)
+run(test_ids) = clustering_benchmark(np, init_data, init_all_data, func_name, MyClusteringAlg(), build_tests(view(tests,test_ids),view(ks,test_ids),config))
