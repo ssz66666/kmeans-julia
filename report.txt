@@ -1,0 +1,914 @@
+julia 0.5.0-rc3 x86_64-w64-mingw32 (Windows 10)
+julia 0.5.0-rc3 x86_64-unknown-linux-gnu (WSL, based on Ubuntu 14.04 Trusty Tahr)
+CPU: Intel Core i7 3610QM @ 3.08GHz (2/4/8 threads) / @ 3.11~3.15GHz (1 thread), 4C8T
+RAM: 16GB(4x4GB DDR3 1600MHz)
+
+testcase        n       d       k
+iris.txt        150     4       3
+testcase1.txt   100     2       5
+testcase2.txt   100     10      5
+testcase3.txt   500     10      5
+testcase4.txt   500     15      5
+testcase5.txt   1000    10      5
+testcase6.txt   2000    20      5
+testcase7.txt   2000    25      5
+testcase8.txt   2000    40      5
+testcase9.txt   5000    40      5
+testcase10.txt  5000    50      5
+testcase11.txt  10000   50      5
+testcase12.txt  25000   100     5
+
+5000 iterations for all test cases.
+Convergence test disabled, i.e. it does not stop iteration early.
+
+
+1 thread, Windows 10 build 14393, x86_64, serial kmeans
+
+running testcase:iris.txt
+  0.373090 seconds (266.80 k allocations: 11.313 MB, 14.77% gc time)
+  0.021535 seconds (5.04 k allocations: 169.438 KB)
+  0.022342 seconds (5.04 k allocations: 169.438 KB)
+  0.022247 seconds (5.04 k allocations: 169.438 KB)
+  0.021812 seconds (5.04 k allocations: 169.438 KB)
+running testcase:testcase1.txt
+  0.015399 seconds (5.04 k allocations: 165.813 KB)
+  0.015674 seconds (5.04 k allocations: 165.813 KB)
+  0.016174 seconds (5.04 k allocations: 165.813 KB)
+  0.016392 seconds (5.04 k allocations: 165.813 KB)
+  0.015597 seconds (5.04 k allocations: 165.813 KB)
+running testcase:testcase2.txt
+  0.048193 seconds (5.04 k allocations: 173.484 KB)
+  0.048909 seconds (5.04 k allocations: 173.484 KB)
+  0.047714 seconds (5.04 k allocations: 173.484 KB)
+  0.046943 seconds (5.04 k allocations: 173.484 KB)
+  0.047805 seconds (5.04 k allocations: 173.484 KB)
+running testcase:testcase3.txt
+  0.242495 seconds (5.04 k allocations: 226.641 KB)
+  0.232722 seconds (5.04 k allocations: 226.641 KB)
+  0.240926 seconds (5.04 k allocations: 226.641 KB)
+  0.242633 seconds (5.04 k allocations: 226.641 KB)
+  0.240001 seconds (5.04 k allocations: 226.641 KB)
+running testcase:testcase4.txt
+  0.324371 seconds (5.04 k allocations: 246.953 KB)
+  0.332185 seconds (5.04 k allocations: 246.953 KB)
+  0.316587 seconds (5.04 k allocations: 246.953 KB)
+  0.332211 seconds (5.04 k allocations: 246.953 KB)
+  0.317533 seconds (5.04 k allocations: 246.953 KB)
+running testcase:testcase5.txt
+  0.475995 seconds (5.04 k allocations: 292.984 KB)
+  0.465908 seconds (5.04 k allocations: 292.984 KB)
+  0.463298 seconds (5.04 k allocations: 292.984 KB)
+  0.461583 seconds (5.04 k allocations: 292.984 KB)
+  0.451498 seconds (5.04 k allocations: 292.984 KB)
+running testcase:testcase6.txt
+  1.691130 seconds (5.04 k allocations: 583.422 KB)
+  1.671913 seconds (5.04 k allocations: 583.422 KB)
+  1.672343 seconds (5.04 k allocations: 583.422 KB)
+  1.648661 seconds (5.04 k allocations: 583.422 KB)
+  1.597746 seconds (5.04 k allocations: 583.422 KB, 0.40% gc time)
+running testcase:testcase7.txt
+  2.076621 seconds (5.04 k allocations: 662.297 KB)
+  2.078051 seconds (5.04 k allocations: 662.297 KB)
+  2.102053 seconds (5.04 k allocations: 662.297 KB)
+  2.122849 seconds (5.04 k allocations: 662.297 KB)
+  2.111035 seconds (5.04 k allocations: 662.297 KB)
+running testcase:testcase8.txt
+  3.507900 seconds (5.04 k allocations: 899.484 KB)
+  3.469339 seconds (5.04 k allocations: 899.484 KB)
+  3.500359 seconds (5.04 k allocations: 899.484 KB)
+  3.488320 seconds (5.04 k allocations: 899.484 KB)
+  3.493600 seconds (5.04 k allocations: 899.484 KB, 0.12% gc time)
+running testcase:testcase9.txt
+  8.761612 seconds (5.04 k allocations: 1.954 MB)
+  8.672784 seconds (5.04 k allocations: 1.954 MB)
+  8.784401 seconds (5.04 k allocations: 1.954 MB)
+  8.534618 seconds (5.04 k allocations: 1.954 MB)
+  8.667436 seconds (5.04 k allocations: 1.954 MB)
+running testcase:testcase10.txt
+ 10.822639 seconds (5.04 k allocations: 2.337 MB)
+ 10.590868 seconds (5.04 k allocations: 2.337 MB)
+ 10.555640 seconds (5.04 k allocations: 2.337 MB, 0.03% gc time)
+ 10.828521 seconds (5.04 k allocations: 2.337 MB)
+ 10.831793 seconds (5.04 k allocations: 2.337 MB)
+running testcase:testcase11.txt
+ 21.877256 seconds (5.04 k allocations: 4.511 MB, 0.02% gc time)
+ 21.669827 seconds (5.04 k allocations: 4.511 MB)
+ 21.473607 seconds (5.04 k allocations: 4.511 MB)
+ 22.128767 seconds (5.04 k allocations: 4.511 MB)
+ 22.095508 seconds (5.04 k allocations: 4.511 MB)
+running testcase:testcase12.txt
+106.933796 seconds (5.04 k allocations: 20.579 MB)
+106.489549 seconds (5.04 k allocations: 20.579 MB)
+107.448963 seconds (5.04 k allocations: 20.579 MB)
+106.462389 seconds (5.04 k allocations: 20.579 MB)
+107.449959 seconds (5.04 k allocations: 20.579 MB)
+
+1 thread, Windows 10 build 14393, x86_64, threaded kmeans
+
+running testcase:iris.txt
+  0.505828 seconds (317.06 k allocations: 13.599 MB, 11.61% gc time)
+  0.025938 seconds (15.05 k allocations: 717.016 KB)
+  0.025448 seconds (15.05 k allocations: 717.016 KB)
+  0.028577 seconds (15.05 k allocations: 717.016 KB)
+  0.026331 seconds (15.05 k allocations: 717.016 KB)
+running testcase:testcase1.txt
+  0.019570 seconds (15.05 k allocations: 713.391 KB)
+  0.018632 seconds (15.05 k allocations: 713.391 KB)
+  0.024567 seconds (15.05 k allocations: 713.391 KB)
+  0.018790 seconds (15.05 k allocations: 713.391 KB)
+  0.019122 seconds (15.05 k allocations: 713.391 KB)
+running testcase:testcase2.txt
+  0.050748 seconds (15.05 k allocations: 721.438 KB)
+  0.051203 seconds (15.05 k allocations: 721.438 KB)
+  0.051294 seconds (15.05 k allocations: 721.438 KB)
+  0.050295 seconds (15.05 k allocations: 721.438 KB)
+  0.050725 seconds (15.05 k allocations: 721.438 KB)
+running testcase:testcase3.txt
+  0.242422 seconds (15.05 k allocations: 774.594 KB)
+  0.241378 seconds (15.05 k allocations: 774.594 KB)
+  0.242525 seconds (15.05 k allocations: 774.594 KB)
+  0.247328 seconds (15.05 k allocations: 774.594 KB, 1.76% gc time)
+  0.242594 seconds (15.05 k allocations: 774.594 KB)
+running testcase:testcase4.txt
+  0.346630 seconds (15.05 k allocations: 795.094 KB)
+  0.350004 seconds (15.05 k allocations: 795.094 KB)
+  0.328014 seconds (15.05 k allocations: 795.094 KB)
+  0.336491 seconds (15.05 k allocations: 795.094 KB)
+  0.338307 seconds (15.05 k allocations: 795.094 KB)
+running testcase:testcase5.txt
+  0.476950 seconds (15.05 k allocations: 840.938 KB)
+  0.473013 seconds (15.05 k allocations: 840.938 KB)
+  0.468901 seconds (15.05 k allocations: 840.938 KB)
+  0.461517 seconds (15.05 k allocations: 840.938 KB)
+  0.488979 seconds (15.05 k allocations: 840.938 KB)
+running testcase:testcase6.txt
+  1.665611 seconds (15.05 k allocations: 1.105 MB)
+  1.646868 seconds (15.05 k allocations: 1.105 MB)
+  1.652081 seconds (15.05 k allocations: 1.105 MB)
+  1.680185 seconds (15.05 k allocations: 1.105 MB)
+  1.707070 seconds (15.05 k allocations: 1.105 MB)
+running testcase:testcase7.txt
+  1.963533 seconds (15.05 k allocations: 1.182 MB)
+  2.102280 seconds (15.05 k allocations: 1.182 MB)
+  2.046036 seconds (15.05 k allocations: 1.182 MB)
+  2.112521 seconds (15.05 k allocations: 1.182 MB)
+  2.126962 seconds (15.05 k allocations: 1.182 MB)
+running testcase:testcase8.txt
+  3.424291 seconds (15.05 k allocations: 1.415 MB)
+  3.478500 seconds (15.05 k allocations: 1.415 MB, 0.11% gc time)
+  3.511916 seconds (15.05 k allocations: 1.415 MB)
+  3.476453 seconds (15.05 k allocations: 1.415 MB)
+  3.459012 seconds (15.05 k allocations: 1.415 MB)
+running testcase:testcase9.txt
+  8.656833 seconds (15.05 k allocations: 2.490 MB)
+  8.619468 seconds (15.05 k allocations: 2.490 MB)
+  8.633456 seconds (15.05 k allocations: 2.490 MB)
+  8.657392 seconds (15.05 k allocations: 2.490 MB)
+  8.682804 seconds (15.05 k allocations: 2.490 MB)
+running testcase:testcase10.txt
+ 10.834873 seconds (15.05 k allocations: 2.874 MB)
+ 10.786350 seconds (15.05 k allocations: 2.874 MB)
+ 10.843761 seconds (15.05 k allocations: 2.874 MB)
+ 10.971766 seconds (15.05 k allocations: 2.874 MB)
+ 10.667433 seconds (15.05 k allocations: 2.874 MB)
+running testcase:testcase11.txt
+ 21.863423 seconds (15.05 k allocations: 5.048 MB)
+ 21.900072 seconds (15.05 k allocations: 5.048 MB)
+ 22.149040 seconds (15.05 k allocations: 5.048 MB)
+ 22.130852 seconds (15.05 k allocations: 5.048 MB, 0.02% gc time)
+ 21.319345 seconds (15.05 k allocations: 5.048 MB)
+running testcase:testcase12.txt
+106.999550 seconds (15.05 k allocations: 21.117 MB)
+108.087886 seconds (15.05 k allocations: 21.117 MB)
+108.441925 seconds (15.05 k allocations: 21.117 MB)
+108.246118 seconds (15.05 k allocations: 21.117 MB)
+108.903436 seconds (15.05 k allocations: 21.117 MB)
+
+2 threads, Windows 10 build 14393, x86_64, threaded kmeans
+
+running testcase:iris.txt
+  0.474639 seconds (322.06 k allocations: 13.752 MB, 11.70% gc time)
+  0.017304 seconds (19.26 k allocations: 847.063 KB)
+  0.017110 seconds (20.04 k allocations: 873.313 KB)
+  0.017039 seconds (19.99 k allocations: 871.438 KB)
+  0.015786 seconds (18.59 k allocations: 825.188 KB)
+running testcase:testcase1.txt
+  0.012890 seconds (19.17 k allocations: 840.469 KB)
+  0.014757 seconds (19.39 k allocations: 848.844 KB)
+  0.013943 seconds (19.86 k allocations: 863.875 KB)
+  0.012643 seconds (19.15 k allocations: 841.500 KB)
+  0.012973 seconds (19.37 k allocations: 848.406 KB)
+running testcase:testcase2.txt
+  0.029509 seconds (19.51 k allocations: 859.953 KB)
+  0.029931 seconds (19.33 k allocations: 854.422 KB)
+  0.028946 seconds (19.35 k allocations: 852.297 KB)
+  0.029787 seconds (19.11 k allocations: 846.766 KB)
+  0.030575 seconds (19.31 k allocations: 853.734 KB)
+running testcase:testcase3.txt
+  0.132400 seconds (20.05 k allocations: 931.422 KB)
+  0.140740 seconds (20.05 k allocations: 931.266 KB, 3.13% gc time)
+  0.126728 seconds (20.04 k allocations: 931.109 KB)
+  0.127227 seconds (20.05 k allocations: 931.422 KB)
+  0.128793 seconds (19.70 k allocations: 918.609 KB)
+running testcase:testcase4.txt
+  0.178573 seconds (20.05 k allocations: 952.047 KB)
+  0.177085 seconds (20.05 k allocations: 951.797 KB)
+  0.182352 seconds (20.05 k allocations: 952.141 KB)
+  0.169297 seconds (19.39 k allocations: 930.109 KB)
+  0.172635 seconds (20.04 k allocations: 951.859 KB)
+running testcase:testcase5.txt
+  0.257220 seconds (20.05 k allocations: 997.797 KB)
+  0.244526 seconds (20.05 k allocations: 997.766 KB)
+  0.241489 seconds (20.05 k allocations: 997.797 KB)
+  0.239500 seconds (20.04 k allocations: 997.422 KB)
+  0.245574 seconds (20.05 k allocations: 997.703 KB)
+running testcase:testcase6.txt
+  0.857239 seconds (20.05 k allocations: 1.258 MB)
+  0.881701 seconds (19.96 k allocations: 1.256 MB, 0.46% gc time)
+  0.878845 seconds (20.05 k allocations: 1.259 MB)
+  0.875480 seconds (20.02 k allocations: 1.258 MB)
+  0.867263 seconds (20.03 k allocations: 1.258 MB)
+running testcase:testcase7.txt
+  1.106709 seconds (19.82 k allocations: 1.329 MB)
+  1.091912 seconds (20.05 k allocations: 1.335 MB)
+  1.048957 seconds (20.05 k allocations: 1.336 MB)
+  1.074326 seconds (20.05 k allocations: 1.336 MB)
+  1.056007 seconds (20.04 k allocations: 1.336 MB)
+running testcase:testcase8.txt
+  1.763648 seconds (20.04 k allocations: 1.569 MB)
+  1.781648 seconds (20.03 k allocations: 1.569 MB)
+  1.763867 seconds (20.04 k allocations: 1.569 MB)
+  1.778469 seconds (20.04 k allocations: 1.569 MB)
+  1.754683 seconds (20.03 k allocations: 1.569 MB)
+running testcase:testcase9.txt
+  4.491001 seconds (20.01 k allocations: 2.645 MB)
+  4.411760 seconds (20.03 k allocations: 2.645 MB)
+  4.404174 seconds (20.04 k allocations: 2.645 MB)
+  4.390920 seconds (20.05 k allocations: 2.645 MB, 0.06% gc time)
+  4.365098 seconds (20.05 k allocations: 2.645 MB)
+running testcase:testcase10.txt
+  5.561839 seconds (20.05 k allocations: 3.028 MB)
+  5.412941 seconds (20.05 k allocations: 3.028 MB)
+  5.563745 seconds (20.05 k allocations: 3.028 MB)
+  5.579575 seconds (20.05 k allocations: 3.028 MB, 0.06% gc time)
+  5.541370 seconds (20.05 k allocations: 3.028 MB)
+running testcase:testcase11.txt
+ 11.395233 seconds (20.05 k allocations: 5.203 MB, 0.03% gc time)
+ 11.376540 seconds (20.04 k allocations: 5.203 MB)
+ 10.977182 seconds (20.05 k allocations: 5.203 MB)
+ 11.145672 seconds (20.04 k allocations: 5.202 MB)
+ 11.152661 seconds (20.05 k allocations: 5.203 MB, 0.02% gc time)
+running testcase:testcase12.txt
+ 55.620108 seconds (20.05 k allocations: 21.274 MB)
+ 54.990111 seconds (20.05 k allocations: 21.274 MB)
+ 54.920781 seconds (20.04 k allocations: 21.274 MB)
+ 54.909082 seconds (20.05 k allocations: 21.274 MB)
+ 55.702292 seconds (20.04 k allocations: 21.274 MB)
+
+4 threads, Windows 10 build 14393, x86_64, under Windows Subsystem for Linux, 3.4.0+, threaded kmeans
+
+running testcase:iris.txt
+  0.480912 seconds (328.24 k allocations: 13.956 MB, 9.43% gc time)
+  0.020025 seconds (25.96 k allocations: 1.031 MB)
+  0.026928 seconds (28.50 k allocations: 1.106 MB)
+  0.018323 seconds (24.36 k allocations: 1008.984 KB)
+  0.018451 seconds (24.17 k allocations: 1003.875 KB)
+running testcase:testcase1.txt
+  0.022257 seconds (27.21 k allocations: 1.063 MB)
+  0.016901 seconds (24.87 k allocations: 1020.781 KB)
+  0.016474 seconds (24.12 k allocations: 998.438 KB)
+  0.022887 seconds (27.20 k allocations: 1.065 MB)
+  0.020297 seconds (25.52 k allocations: 1.014 MB)
+running testcase:testcase2.txt
+  0.035521 seconds (27.06 k allocations: 1.067 MB)
+  0.032221 seconds (26.59 k allocations: 1.048 MB)
+  0.029799 seconds (26.18 k allocations: 1.044 MB)
+  0.029286 seconds (26.92 k allocations: 1.067 MB)
+  0.029069 seconds (24.83 k allocations: 1.004 MB)
+running testcase:testcase3.txt
+  0.083516 seconds (27.54 k allocations: 1.137 MB)
+  0.095747 seconds (28.85 k allocations: 1.175 MB)
+  0.087105 seconds (28.26 k allocations: 1.156 MB, 4.48% gc time)
+  0.079615 seconds (26.80 k allocations: 1.115 MB)
+  0.090628 seconds (29.13 k allocations: 1.183 MB)
+running testcase:testcase4.txt
+  0.117830 seconds (28.13 k allocations: 1.174 MB)
+  0.120359 seconds (29.67 k allocations: 1.224 MB)
+  0.101856 seconds (27.34 k allocations: 1.151 MB)
+  0.106536 seconds (28.09 k allocations: 1.176 MB)
+  0.104507 seconds (28.98 k allocations: 1.204 MB)
+running testcase:testcase5.txt
+  0.167170 seconds (29.11 k allocations: 1.248 MB)
+  0.155128 seconds (29.57 k allocations: 1.264 MB)
+  0.154738 seconds (28.92 k allocations: 1.246 MB)
+  0.158584 seconds (27.52 k allocations: 1.200 MB)
+  0.171140 seconds (29.62 k allocations: 1.266 MB)
+running testcase:testcase6.txt
+  0.516121 seconds (29.30 k allocations: 1.540 MB, 0.52% gc time)
+  0.512110 seconds (29.64 k allocations: 1.551 MB)
+  0.490312 seconds (29.49 k allocations: 1.546 MB)
+  0.535318 seconds (29.57 k allocations: 1.547 MB)
+  0.514456 seconds (29.03 k allocations: 1.532 MB)
+running testcase:testcase7.txt
+  0.613236 seconds (29.57 k allocations: 1.625 MB)
+  0.670582 seconds (29.88 k allocations: 1.637 MB)
+  0.675634 seconds (29.74 k allocations: 1.632 MB)
+  0.684165 seconds (29.89 k allocations: 1.639 MB)
+  0.618742 seconds (29.23 k allocations: 1.618 MB)
+running testcase:testcase8.txt
+  1.061670 seconds (29.84 k allocations: 1.871 MB)
+  0.971609 seconds (29.82 k allocations: 1.869 MB)
+  1.043405 seconds (29.18 k allocations: 1.848 MB)
+  1.038037 seconds (29.79 k allocations: 1.870 MB)
+  1.049555 seconds (29.74 k allocations: 1.868 MB)
+running testcase:testcase9.txt
+  2.541885 seconds (29.94 k allocations: 2.948 MB)
+  2.518849 seconds (30.03 k allocations: 2.953 MB, 0.04% gc time)
+  2.619099 seconds (29.80 k allocations: 2.941 MB)
+  3.002959 seconds (29.92 k allocations: 2.948 MB)
+  2.812169 seconds (29.86 k allocations: 2.945 MB)
+running testcase:testcase10.txt
+  3.739053 seconds (30.01 k allocations: 3.337 MB)
+  3.224534 seconds (30.00 k allocations: 3.335 MB, 0.04% gc time)
+  3.262904 seconds (29.89 k allocations: 3.334 MB)
+  3.165114 seconds (29.94 k allocations: 3.332 MB)
+  3.163607 seconds (29.90 k allocations: 3.330 MB)
+running testcase:testcase11.txt
+  6.277052 seconds (29.98 k allocations: 5.509 MB)
+  6.560817 seconds (30.01 k allocations: 5.511 MB)
+  6.590772 seconds (30.00 k allocations: 5.510 MB)
+  6.628282 seconds (30.01 k allocations: 5.510 MB, 0.01% gc time)
+  6.395061 seconds (30.00 k allocations: 5.510 MB)
+running testcase:testcase12.txt
+ 30.936249 seconds (30.05 k allocations: 21.587 MB)
+ 31.647100 seconds (30.05 k allocations: 21.587 MB)
+ 30.632440 seconds (30.04 k allocations: 21.587 MB)
+ 30.708308 seconds (30.04 k allocations: 21.587 MB)
+ 30.932360 seconds (30.04 k allocations: 21.587 MB)
+ 
+4 threads, Windows 10 build 14393, x86_64, threaded kmeans
+
+running testcase:iris.txt
+  0.466874 seconds (325.58 k allocations: 13.860 MB, 11.73% gc time)
+  0.012320 seconds (24.33 k allocations: 1008.453 KB)
+  0.012777 seconds (21.86 k allocations: 929.047 KB)
+  0.014012 seconds (22.49 k allocations: 942.469 KB)
+  0.013001 seconds (25.19 k allocations: 1.011 MB)
+running testcase:testcase1.txt
+  0.011587 seconds (23.72 k allocations: 983.719 KB)
+  0.010680 seconds (22.61 k allocations: 950.000 KB)
+  0.013020 seconds (23.74 k allocations: 982.125 KB)
+  0.011216 seconds (22.25 k allocations: 938.125 KB)
+  0.011606 seconds (22.69 k allocations: 951.813 KB)
+running testcase:testcase2.txt
+  0.026339 seconds (27.28 k allocations: 1.076 MB)
+  0.024481 seconds (26.06 k allocations: 1.033 MB)
+  0.020781 seconds (24.98 k allocations: 1.009 MB)
+  0.021689 seconds (23.54 k allocations: 987.047 KB)
+  0.033073 seconds (26.89 k allocations: 1.056 MB, 21.38% gc time)
+running testcase:testcase3.txt
+  0.075325 seconds (25.46 k allocations: 1.075 MB)
+  0.079616 seconds (27.25 k allocations: 1.130 MB)
+  0.094850 seconds (28.20 k allocations: 1.159 MB)
+  0.101601 seconds (28.97 k allocations: 1.179 MB)
+  0.086626 seconds (28.93 k allocations: 1.180 MB)
+running testcase:testcase4.txt
+  0.097082 seconds (27.96 k allocations: 1.170 MB)
+  0.121970 seconds (28.53 k allocations: 1.181 MB)
+  0.122286 seconds (29.37 k allocations: 1.211 MB)
+  0.100113 seconds (28.55 k allocations: 1.191 MB)
+  0.109264 seconds (28.23 k allocations: 1.176 MB)
+running testcase:testcase5.txt
+  0.162698 seconds (30.00 k allocations: 1.278 MB)
+  0.147999 seconds (28.31 k allocations: 1.225 MB)
+  0.145895 seconds (28.49 k allocations: 1.232 MB)
+  0.141195 seconds (28.91 k allocations: 1.242 MB)
+  0.173616 seconds (29.02 k allocations: 1.247 MB)
+running testcase:testcase6.txt
+  0.484116 seconds (29.46 k allocations: 1.546 MB)
+  0.471578 seconds (29.72 k allocations: 1.551 MB)
+  0.485106 seconds (29.84 k allocations: 1.556 MB)
+  0.508312 seconds (29.10 k allocations: 1.530 MB)
+  0.501115 seconds (29.81 k allocations: 1.557 MB)
+running testcase:testcase7.txt
+  0.629408 seconds (28.80 k allocations: 1.602 MB)
+  0.604216 seconds (29.68 k allocations: 1.631 MB)
+  0.645525 seconds (29.34 k allocations: 1.620 MB)
+  0.627533 seconds (28.95 k allocations: 1.609 MB, 0.53% gc time)
+  0.607955 seconds (28.72 k allocations: 1.600 MB)
+running testcase:testcase8.txt
+  1.102770 seconds (29.72 k allocations: 1.866 MB)
+  1.047342 seconds (29.78 k allocations: 1.867 MB)
+  1.065898 seconds (29.80 k allocations: 1.866 MB)
+  1.056875 seconds (29.52 k allocations: 1.857 MB)
+  1.024473 seconds (29.92 k allocations: 1.870 MB)
+running testcase:testcase9.txt
+  2.534616 seconds (29.93 k allocations: 2.947 MB, 0.10% gc time)
+  2.420993 seconds (29.84 k allocations: 2.944 MB)
+  2.544402 seconds (29.97 k allocations: 2.948 MB)
+  2.411151 seconds (29.95 k allocations: 2.947 MB)
+  2.439572 seconds (29.89 k allocations: 2.943 MB)
+running testcase:testcase10.txt
+  3.062630 seconds (29.93 k allocations: 3.332 MB, 0.10% gc time)
+  3.130058 seconds (29.97 k allocations: 3.334 MB)
+  3.114124 seconds (29.96 k allocations: 3.334 MB)
+  3.075925 seconds (29.98 k allocations: 3.334 MB)
+  2.988955 seconds (29.93 k allocations: 3.332 MB)
+running testcase:testcase11.txt
+  6.092538 seconds (29.99 k allocations: 5.509 MB)
+  6.134318 seconds (30.01 k allocations: 5.510 MB)
+  6.081445 seconds (29.98 k allocations: 5.509 MB)
+  6.291165 seconds (29.99 k allocations: 5.509 MB, 0.10% gc time)
+  6.031525 seconds (29.99 k allocations: 5.508 MB)
+running testcase:testcase12.txt
+ 29.687948 seconds (30.04 k allocations: 21.587 MB)
+ 29.691728 seconds (30.03 k allocations: 21.587 MB)
+ 29.782368 seconds (30.03 k allocations: 21.583 MB)
+ 29.904939 seconds (30.04 k allocations: 21.587 MB)
+ 32.182496 seconds (30.04 k allocations: 21.587 MB)
+
+8 threads, Windows 10 build 14393, x86_64, under Windows Subsystem for Linux, 3.4.0+, threaded kmeans
+
+running testcase:iris.txt
+  0.528436 seconds (338.31 k allocations: 14.240 MB, 9.16% gc time)
+  0.034285 seconds (36.26 k allocations: 1.324 MB)
+  0.029444 seconds (35.75 k allocations: 1.308 MB)
+  0.030225 seconds (35.46 k allocations: 1.299 MB)
+  0.030103 seconds (36.34 k allocations: 1.328 MB)
+running testcase:testcase1.txt
+  0.028516 seconds (34.72 k allocations: 1.273 MB)
+  0.040347 seconds (35.23 k allocations: 1.290 MB)
+  0.036764 seconds (35.30 k allocations: 1.290 MB)
+  0.077577 seconds (34.75 k allocations: 1.272 MB, 6.77% gc time)
+  0.024697 seconds (35.32 k allocations: 1.291 MB)
+running testcase:testcase2.txt
+  0.040613 seconds (36.11 k allocations: 1.320 MB)
+  0.039843 seconds (36.69 k allocations: 1.340 MB)
+  0.058564 seconds (35.25 k allocations: 1.278 MB)
+  0.037999 seconds (37.64 k allocations: 1.384 MB)
+  0.038599 seconds (35.57 k allocations: 1.313 MB)
+running testcase:testcase3.txt
+  0.092708 seconds (43.59 k allocations: 1.610 MB)
+  0.080128 seconds (37.01 k allocations: 1.402 MB)
+  0.102661 seconds (34.87 k allocations: 1.328 MB)
+  0.112593 seconds (36.70 k allocations: 1.393 MB)
+  0.084314 seconds (38.41 k allocations: 1.448 MB)
+running testcase:testcase4.txt
+  0.105045 seconds (40.93 k allocations: 1.558 MB)
+  0.099258 seconds (43.62 k allocations: 1.644 MB)
+  0.115321 seconds (41.10 k allocations: 1.566 MB)
+  0.119889 seconds (41.30 k allocations: 1.566 MB, 3.51% gc time)
+  0.102152 seconds (39.17 k allocations: 1.500 MB)
+running testcase:testcase5.txt
+  0.120954 seconds (39.29 k allocations: 1.532 MB)
+  0.124542 seconds (40.84 k allocations: 1.591 MB)
+  0.127232 seconds (40.35 k allocations: 1.578 MB)
+  0.153957 seconds (37.14 k allocations: 1.475 MB)
+  0.123453 seconds (41.14 k allocations: 1.604 MB)
+running testcase:testcase6.txt
+  0.383863 seconds (41.89 k allocations: 1.911 MB)
+  0.418135 seconds (41.83 k allocations: 1.910 MB)
+  0.471392 seconds (43.67 k allocations: 1.969 MB, 0.59% gc time)
+  0.501649 seconds (43.53 k allocations: 1.965 MB)
+  0.472038 seconds (42.25 k allocations: 1.931 MB)
+running testcase:testcase7.txt
+  0.639440 seconds (44.11 k allocations: 2.064 MB)
+  0.504880 seconds (44.55 k allocations: 2.077 MB)
+  0.494692 seconds (45.51 k allocations: 2.106 MB)
+  0.500609 seconds (45.76 k allocations: 2.113 MB)
+  0.643228 seconds (44.59 k allocations: 2.077 MB)
+running testcase:testcase8.txt
+  0.711699 seconds (46.11 k allocations: 2.366 MB)
+  0.731281 seconds (45.89 k allocations: 2.351 MB)
+  0.705975 seconds (45.42 k allocations: 2.340 MB)
+  0.698375 seconds (45.63 k allocations: 2.342 MB)
+  0.732784 seconds (47.01 k allocations: 2.389 MB)
+running testcase:testcase9.txt
+  1.733730 seconds (48.39 k allocations: 3.501 MB, 0.07% gc time)
+  1.860791 seconds (49.01 k allocations: 3.521 MB)
+  1.743385 seconds (49.13 k allocations: 3.521 MB)
+  1.739410 seconds (48.44 k allocations: 3.495 MB)
+  2.166311 seconds (48.77 k allocations: 3.506 MB)
+running testcase:testcase10.txt
+  2.655865 seconds (49.46 k allocations: 3.929 MB)
+  2.261130 seconds (49.24 k allocations: 3.921 MB)
+  2.121581 seconds (49.28 k allocations: 3.927 MB)
+  2.133274 seconds (48.91 k allocations: 3.912 MB)
+  2.103921 seconds (49.50 k allocations: 3.931 MB)
+running testcase:testcase11.txt
+  5.022913 seconds (49.87 k allocations: 6.121 MB)
+  4.619674 seconds (49.88 k allocations: 6.121 MB)
+  4.758141 seconds (49.91 k allocations: 6.122 MB, 0.05% gc time)
+  4.417022 seconds (49.81 k allocations: 6.120 MB)
+  4.154418 seconds (49.81 k allocations: 6.119 MB)
+running testcase:testcase12.txt
+ 20.249807 seconds (49.97 k allocations: 22.212 MB)
+ 20.799975 seconds (50.01 k allocations: 22.212 MB)
+ 19.835371 seconds (49.99 k allocations: 22.212 MB)
+ 19.654732 seconds (49.98 k allocations: 22.212 MB)
+ 20.415554 seconds (49.99 k allocations: 22.212 MB)
+
+8 threads, Windows 10 build 14393, x86_64, threaded kmeans 
+
+running testcase:iris.txt
+  0.522689 seconds (335.12 k allocations: 14.059 MB, 10.37% gc time)
+  0.018456 seconds (31.64 k allocations: 1.157 MB)
+  0.020000 seconds (32.00 k allocations: 1.164 MB)
+  0.019683 seconds (31.91 k allocations: 1.151 MB)
+  0.021891 seconds (31.06 k allocations: 1.138 MB)
+running testcase:testcase1.txt
+  0.018753 seconds (32.57 k allocations: 1.186 MB)
+  0.018087 seconds (31.29 k allocations: 1.157 MB)
+  0.018896 seconds (32.83 k allocations: 1.202 MB)
+  0.022381 seconds (31.77 k allocations: 1.156 MB)
+  0.019339 seconds (33.09 k allocations: 1.215 MB)
+running testcase:testcase2.txt
+  0.029987 seconds (34.03 k allocations: 1.259 MB)
+  0.036554 seconds (35.54 k allocations: 1.317 MB, 16.45% gc time)
+  0.029019 seconds (31.79 k allocations: 1.189 MB)
+  0.029275 seconds (33.75 k allocations: 1.236 MB)
+  0.029278 seconds (33.83 k allocations: 1.232 MB)
+running testcase:testcase3.txt
+  0.068426 seconds (38.41 k allocations: 1.447 MB)
+  0.067993 seconds (39.36 k allocations: 1.471 MB)
+  0.067979 seconds (38.16 k allocations: 1.432 MB)
+  0.070623 seconds (39.76 k allocations: 1.482 MB)
+  0.069279 seconds (37.40 k allocations: 1.409 MB)
+running testcase:testcase4.txt
+  0.086430 seconds (42.20 k allocations: 1.590 MB)
+  0.114574 seconds (39.93 k allocations: 1.500 MB)
+  0.088526 seconds (39.10 k allocations: 1.476 MB)
+  0.091326 seconds (40.45 k allocations: 1.538 MB)
+  0.096983 seconds (40.59 k allocations: 1.542 MB)
+running testcase:testcase5.txt
+  0.127700 seconds (39.43 k allocations: 1.538 MB, 3.71% gc time)
+  0.115510 seconds (35.87 k allocations: 1.435 MB)
+  0.120688 seconds (39.73 k allocations: 1.547 MB)
+  0.118396 seconds (38.31 k allocations: 1.509 MB)
+  0.113984 seconds (40.07 k allocations: 1.561 MB)
+running testcase:testcase6.txt
+  0.356888 seconds (40.15 k allocations: 1.849 MB)
+  0.360251 seconds (42.77 k allocations: 1.937 MB)
+  0.376468 seconds (46.15 k allocations: 2.040 MB)
+  0.379782 seconds (42.67 k allocations: 1.918 MB)
+  0.357332 seconds (41.09 k allocations: 1.876 MB)
+running testcase:testcase7.txt
+  0.451121 seconds (45.28 k allocations: 2.095 MB)
+  0.434716 seconds (44.29 k allocations: 2.061 MB)
+  0.442848 seconds (45.35 k allocations: 2.103 MB)
+  0.443495 seconds (45.21 k allocations: 2.095 MB)
+  0.466497 seconds (45.89 k allocations: 2.110 MB)
+running testcase:testcase8.txt
+  0.727679 seconds (46.59 k allocations: 2.379 MB)
+  0.681450 seconds (45.51 k allocations: 2.339 MB)
+  0.726869 seconds (46.44 k allocations: 2.362 MB)
+  0.704812 seconds (45.08 k allocations: 2.316 MB)
+  0.706224 seconds (46.11 k allocations: 2.353 MB)
+running testcase:testcase9.txt
+  1.788957 seconds (48.42 k allocations: 3.499 MB)
+  1.756345 seconds (48.26 k allocations: 3.482 MB, 0.17% gc time)
+  1.871759 seconds (48.67 k allocations: 3.504 MB)
+  1.719152 seconds (48.69 k allocations: 3.496 MB)
+  1.707956 seconds (48.10 k allocations: 3.474 MB)
+running testcase:testcase10.txt
+  2.101473 seconds (49.04 k allocations: 3.910 MB)
+  2.101196 seconds (48.37 k allocations: 3.883 MB, 0.15% gc time)
+  2.132297 seconds (48.70 k allocations: 3.895 MB)
+  2.110822 seconds (49.14 k allocations: 3.915 MB)
+  2.123535 seconds (48.63 k allocations: 3.889 MB)
+running testcase:testcase11.txt
+  4.238286 seconds (49.69 k allocations: 6.112 MB)
+  4.237012 seconds (49.69 k allocations: 6.114 MB)
+  4.252318 seconds (49.74 k allocations: 6.114 MB, 0.14% gc time)
+  4.206178 seconds (49.78 k allocations: 6.114 MB)
+  4.253136 seconds (49.69 k allocations: 6.113 MB)
+running testcase:testcase12.txt
+ 19.894065 seconds (49.99 k allocations: 22.212 MB)
+ 19.923545 seconds (49.99 k allocations: 22.208 MB)
+ 19.918624 seconds (49.99 k allocations: 22.212 MB)
+ 19.867559 seconds (50.00 k allocations: 22.211 MB)
+ 19.978457 seconds (49.99 k allocations: 22.212 MB)
+ 
+4 processes, Windows 10 build 14393, x86_64, distributed kmeans
+
+running testcase:iris.txt
+  7.294166 seconds (5.13 M allocations: 210.362 MB, 0.76% gc time)
+  4.074877 seconds (3.48 M allocations: 139.013 MB, 0.88% gc time)
+  4.208669 seconds (3.50 M allocations: 139.323 MB, 0.78% gc time)
+  4.056511 seconds (3.47 M allocations: 138.668 MB, 0.77% gc time)
+  4.063091 seconds (3.49 M allocations: 139.197 MB, 0.82% gc time)
+running testcase:testcase1.txt
+  4.002958 seconds (3.49 M allocations: 139.134 MB, 0.70% gc time)
+  3.964773 seconds (3.47 M allocations: 138.692 MB, 0.66% gc time)
+  3.986249 seconds (3.48 M allocations: 139.009 MB, 0.83% gc time)
+  3.982965 seconds (3.50 M allocations: 139.302 MB, 0.71% gc time)
+  3.986887 seconds (3.47 M allocations: 138.585 MB, 0.90% gc time)
+running testcase:testcase2.txt
+  4.015865 seconds (3.50 M allocations: 152.272 MB, 0.96% gc time)
+  4.007334 seconds (3.48 M allocations: 151.656 MB, 0.80% gc time)
+  4.003996 seconds (3.48 M allocations: 151.609 MB, 0.83% gc time)
+  4.012684 seconds (3.49 M allocations: 151.900 MB, 0.88% gc time)
+  4.004004 seconds (3.48 M allocations: 151.610 MB, 0.80% gc time)
+running testcase:testcase3.txt
+  4.056097 seconds (3.48 M allocations: 151.934 MB, 0.79% gc time)
+  4.047081 seconds (3.48 M allocations: 151.942 MB, 0.78% gc time)
+  4.018199 seconds (3.48 M allocations: 151.733 MB, 0.79% gc time)
+  4.053836 seconds (3.48 M allocations: 151.716 MB, 0.78% gc time)
+  4.028157 seconds (3.48 M allocations: 151.711 MB, 0.79% gc time)
+running testcase:testcase4.txt
+  4.089327 seconds (3.58 M allocations: 160.720 MB, 0.75% gc time)
+  4.100386 seconds (3.58 M allocations: 160.819 MB, 0.90% gc time)
+  4.078559 seconds (3.59 M allocations: 161.008 MB, 1.01% gc time)
+  4.079151 seconds (3.57 M allocations: 160.331 MB, 0.78% gc time)
+  4.091034 seconds (3.59 M allocations: 160.974 MB, 0.93% gc time)
+running testcase:testcase5.txt
+  4.123383 seconds (3.49 M allocations: 152.311 MB, 0.84% gc time)
+  4.069725 seconds (3.47 M allocations: 151.656 MB, 0.81% gc time)
+  4.088486 seconds (3.48 M allocations: 151.857 MB, 0.81% gc time)
+  4.106981 seconds (3.47 M allocations: 151.744 MB, 0.79% gc time)
+  4.085520 seconds (3.50 M allocations: 152.412 MB, 0.99% gc time)
+running testcase:testcase6.txt
+  4.493173 seconds (3.57 M allocations: 167.693 MB, 0.71% gc time)
+  4.467914 seconds (3.58 M allocations: 168.097 MB, 0.84% gc time)
+  4.579996 seconds (3.58 M allocations: 167.875 MB, 2.45% gc time)
+  4.440861 seconds (3.58 M allocations: 167.860 MB, 0.62% gc time)
+  4.452802 seconds (3.58 M allocations: 167.872 MB, 0.71% gc time)
+running testcase:testcase7.txt
+  4.693522 seconds (3.59 M allocations: 176.633 MB, 0.77% gc time)
+  4.644627 seconds (3.58 M allocations: 176.446 MB, 0.82% gc time)
+  5.147989 seconds (3.57 M allocations: 176.176 MB, 0.63% gc time)
+  4.929194 seconds (3.58 M allocations: 176.378 MB, 0.65% gc time)
+  4.546146 seconds (3.58 M allocations: 176.412 MB, 0.74% gc time)
+running testcase:testcase8.txt
+  5.227428 seconds (3.64 M allocations: 202.209 MB, 0.66% gc time)
+  5.376207 seconds (3.65 M allocations: 202.330 MB, 1.98% gc time)
+  5.164082 seconds (3.63 M allocations: 201.815 MB, 0.61% gc time)
+  5.342186 seconds (3.66 M allocations: 202.634 MB, 0.71% gc time)
+  5.275002 seconds (3.64 M allocations: 202.027 MB, 0.67% gc time)
+running testcase:testcase9.txt
+  7.120777 seconds (3.63 M allocations: 203.868 MB, 0.54% gc time)
+  7.008258 seconds (3.64 M allocations: 204.216 MB, 0.47% gc time)
+  7.247226 seconds (3.64 M allocations: 204.012 MB, 0.48% gc time)
+  7.193628 seconds (3.64 M allocations: 204.139 MB, 0.53% gc time)
+  7.170714 seconds (3.64 M allocations: 204.030 MB, 0.48% gc time)
+running testcase:testcase10.txt
+  8.064617 seconds (3.63 M allocations: 220.992 MB, 0.55% gc time)
+  7.583165 seconds (3.67 M allocations: 222.083 MB, 0.73% gc time)
+  7.461421 seconds (3.62 M allocations: 220.714 MB, 0.84% gc time)
+  7.801994 seconds (3.64 M allocations: 221.212 MB, 0.65% gc time)
+  7.505064 seconds (3.64 M allocations: 221.232 MB, 0.66% gc time)
+running testcase:testcase11.txt
+ 11.098386 seconds (3.65 M allocations: 225.476 MB, 0.50% gc time)
+ 11.102386 seconds (3.63 M allocations: 225.025 MB, 0.43% gc time)
+ 10.965114 seconds (3.64 M allocations: 225.194 MB, 0.42% gc time)
+ 10.959618 seconds (3.64 M allocations: 225.198 MB, 0.46% gc time)
+ 11.219803 seconds (3.64 M allocations: 225.209 MB, 0.39% gc time)
+running testcase:testcase12.txt
+ 36.408274 seconds (3.64 M allocations: 331.939 MB, 0.35% gc time)
+ 37.000328 seconds (3.63 M allocations: 331.729 MB, 0.13% gc time)
+ 36.390018 seconds (3.64 M allocations: 331.812 MB, 0.13% gc time)
+ 39.853523 seconds (3.64 M allocations: 331.814 MB, 0.14% gc time)
+ 36.255224 seconds (3.63 M allocations: 331.618 MB, 0.14% gc time)
+
+8 processes, Windows 10 build 14393, x86_64, distributed kmeans
+
+running testcase:iris.txt
+ 13.493335 seconds (8.61 M allocations: 349.708 MB, 0.68% gc time)
+  8.804733 seconds (6.97 M allocations: 278.350 MB, 0.73% gc time)
+  8.808132 seconds (6.96 M allocations: 277.955 MB, 0.78% gc time)
+  8.787072 seconds (6.97 M allocations: 278.297 MB, 0.76% gc time)
+  8.814789 seconds (6.96 M allocations: 277.936 MB, 0.77% gc time)
+running testcase:testcase1.txt
+  8.795189 seconds (6.97 M allocations: 278.290 MB, 0.69% gc time)
+  8.928541 seconds (6.96 M allocations: 277.999 MB, 0.68% gc time)
+  8.798785 seconds (6.98 M allocations: 278.678 MB, 0.70% gc time)
+  8.832869 seconds (6.99 M allocations: 278.841 MB, 0.71% gc time)
+  8.802764 seconds (6.94 M allocations: 277.574 MB, 0.66% gc time)
+running testcase:testcase2.txt
+  8.866736 seconds (6.96 M allocations: 303.751 MB, 0.72% gc time)
+  8.823458 seconds (6.97 M allocations: 303.804 MB, 0.74% gc time)
+  8.827522 seconds (6.97 M allocations: 303.874 MB, 0.74% gc time)
+  8.852207 seconds (6.97 M allocations: 303.905 MB, 0.71% gc time)
+  8.857422 seconds (6.97 M allocations: 303.900 MB, 0.72% gc time)
+running testcase:testcase3.txt
+  8.853801 seconds (6.97 M allocations: 304.023 MB, 0.74% gc time)
+  8.850226 seconds (6.95 M allocations: 303.579 MB, 0.72% gc time)
+  9.142814 seconds (6.97 M allocations: 303.952 MB, 0.66% gc time)
+  9.674567 seconds (6.95 M allocations: 303.563 MB, 0.65% gc time)
+  8.903008 seconds (6.97 M allocations: 304.002 MB, 0.70% gc time)
+running testcase:testcase4.txt
+  9.022869 seconds (7.16 M allocations: 321.448 MB, 0.81% gc time)
+  8.941100 seconds (7.17 M allocations: 321.785 MB, 0.78% gc time)
+  8.902116 seconds (7.15 M allocations: 321.277 MB, 0.73% gc time)
+  8.957703 seconds (7.16 M allocations: 321.621 MB, 0.89% gc time)
+  8.960901 seconds (7.16 M allocations: 321.447 MB, 0.80% gc time)
+running testcase:testcase5.txt
+  8.969629 seconds (6.96 M allocations: 303.875 MB, 0.76% gc time)
+  9.038571 seconds (6.97 M allocations: 304.093 MB, 0.74% gc time)
+  8.964761 seconds (6.96 M allocations: 303.871 MB, 0.70% gc time)
+  8.954106 seconds (6.96 M allocations: 303.896 MB, 0.82% gc time)
+  8.930536 seconds (6.96 M allocations: 303.891 MB, 0.84% gc time)
+running testcase:testcase6.txt
+  9.554892 seconds (7.14 M allocations: 335.343 MB, 0.78% gc time)
+  9.594950 seconds (7.15 M allocations: 335.576 MB, 0.81% gc time)
+  9.606818 seconds (7.14 M allocations: 335.285 MB, 0.76% gc time)
+  9.556542 seconds (7.17 M allocations: 336.232 MB, 0.86% gc time)
+  9.778698 seconds (7.14 M allocations: 335.124 MB, 0.76% gc time)
+running testcase:testcase7.txt
+ 10.229405 seconds (7.16 M allocations: 352.514 MB, 0.91% gc time)
+ 10.153161 seconds (7.15 M allocations: 352.373 MB, 0.89% gc time)
+ 10.005348 seconds (7.14 M allocations: 352.055 MB, 0.87% gc time)
+  9.979856 seconds (7.15 M allocations: 352.232 MB, 1.50% gc time)
+  9.686703 seconds (7.14 M allocations: 352.103 MB, 0.64% gc time)
+running testcase:testcase8.txt
+ 11.150539 seconds (7.26 M allocations: 403.201 MB, 0.61% gc time)
+ 10.946660 seconds (7.27 M allocations: 403.038 MB, 0.62% gc time)
+ 10.650771 seconds (7.28 M allocations: 403.358 MB, 0.67% gc time)
+ 11.408226 seconds (7.27 M allocations: 403.178 MB, 0.59% gc time)
+ 11.705767 seconds (7.27 M allocations: 403.058 MB, 1.19% gc time)
+running testcase:testcase9.txt
+ 11.336849 seconds (7.27 M allocations: 405.130 MB, 0.60% gc time)
+ 11.276452 seconds (7.27 M allocations: 405.166 MB, 0.65% gc time)
+ 10.959543 seconds (7.26 M allocations: 404.755 MB, 0.63% gc time)
+ 11.018188 seconds (7.27 M allocations: 405.163 MB, 0.65% gc time)
+ 11.333905 seconds (7.27 M allocations: 405.001 MB, 0.62% gc time)
+running testcase:testcase10.txt
+ 11.457675 seconds (7.26 M allocations: 438.364 MB, 0.79% gc time)
+ 11.248045 seconds (7.28 M allocations: 438.746 MB, 0.87% gc time)
+ 11.372565 seconds (7.26 M allocations: 438.567 MB, 1.41% gc time)
+ 11.576882 seconds (7.27 M allocations: 438.591 MB, 0.72% gc time)
+ 12.557950 seconds (7.28 M allocations: 438.974 MB, 0.79% gc time)
+running testcase:testcase11.txt
+ 14.871034 seconds (7.27 M allocations: 442.482 MB, 0.64% gc time)
+ 14.689482 seconds (7.29 M allocations: 442.969 MB, 0.64% gc time)
+ 13.817086 seconds (7.28 M allocations: 442.779 MB, 0.66% gc time)
+ 14.383068 seconds (7.27 M allocations: 442.577 MB, 0.66% gc time)
+ 14.292262 seconds (7.26 M allocations: 442.450 MB, 0.65% gc time)
+running testcase:testcase12.txt
+ 36.865388 seconds (7.26 M allocations: 624.458 MB, 0.60% gc time)
+ 37.371376 seconds (7.28 M allocations: 624.972 MB, 0.34% gc time)
+ 34.728285 seconds (7.27 M allocations: 624.826 MB, 0.31% gc time)
+ 33.817187 seconds (7.27 M allocations: 624.834 MB, 0.32% gc time)
+ 34.222214 seconds (7.26 M allocations: 624.677 MB, 0.29% gc time)
+
+4 processes, Windows 10 build 14393, x86_64, shared kmeans
+
+running testcase:iris.txt
+ 21.340355 seconds (24.39 M allocations: 1.169 GB, 1.43% gc time)
+ 12.654228 seconds (17.67 M allocations: 905.270 MB, 1.48% gc time)
+ 12.541871 seconds (17.63 M allocations: 904.250 MB, 1.43% gc time)
+ 12.643225 seconds (17.66 M allocations: 905.038 MB, 1.46% gc time)
+ 12.587845 seconds (17.64 M allocations: 904.628 MB, 1.43% gc time)
+running testcase:testcase1.txt
+ 12.632199 seconds (17.62 M allocations: 903.922 MB, 1.42% gc time)
+ 12.669480 seconds (17.67 M allocations: 905.309 MB, 1.96% gc time)
+ 12.586387 seconds (17.63 M allocations: 904.392 MB, 1.21% gc time)
+ 12.486971 seconds (17.63 M allocations: 904.434 MB, 1.18% gc time)
+ 12.597431 seconds (17.66 M allocations: 905.137 MB, 1.23% gc time)
+running testcase:testcase2.txt
+ 13.530149 seconds (17.62 M allocations: 911.369 MB, 1.13% gc time)
+ 12.590249 seconds (17.65 M allocations: 912.167 MB, 1.22% gc time)
+ 12.561405 seconds (17.64 M allocations: 912.107 MB, 1.19% gc time)
+ 12.532041 seconds (17.63 M allocations: 911.587 MB, 1.19% gc time)
+ 12.580142 seconds (17.65 M allocations: 912.117 MB, 1.22% gc time)
+running testcase:testcase3.txt
+ 12.680633 seconds (17.65 M allocations: 912.205 MB, 1.75% gc time)
+ 12.591086 seconds (17.62 M allocations: 911.449 MB, 1.14% gc time)
+ 12.564910 seconds (17.65 M allocations: 912.343 MB, 1.15% gc time)
+ 12.565441 seconds (17.65 M allocations: 912.322 MB, 1.17% gc time)
+ 13.408207 seconds (17.65 M allocations: 912.186 MB, 1.12% gc time)
+running testcase:testcase4.txt
+ 12.821868 seconds (17.74 M allocations: 917.277 MB, 1.14% gc time)
+ 12.652078 seconds (17.71 M allocations: 916.448 MB, 1.11% gc time)
+ 12.644205 seconds (17.74 M allocations: 917.100 MB, 1.17% gc time)
+ 12.650445 seconds (17.74 M allocations: 917.169 MB, 1.16% gc time)
+ 12.633292 seconds (17.74 M allocations: 917.204 MB, 1.19% gc time)
+running testcase:testcase5.txt
+ 12.638287 seconds (17.71 M allocations: 912.770 MB, 1.19% gc time)
+ 12.692544 seconds (17.78 M allocations: 914.638 MB, 1.21% gc time)
+ 12.634518 seconds (17.75 M allocations: 913.880 MB, 1.26% gc time)
+ 12.627285 seconds (17.73 M allocations: 913.291 MB, 1.26% gc time)
+ 12.654841 seconds (17.75 M allocations: 913.871 MB, 1.28% gc time)
+running testcase:testcase6.txt
+ 12.927485 seconds (17.84 M allocations: 921.932 MB, 1.26% gc time)
+ 12.910630 seconds (17.88 M allocations: 922.981 MB, 1.27% gc time)
+ 12.878404 seconds (17.85 M allocations: 922.190 MB, 1.25% gc time)
+ 12.914944 seconds (17.85 M allocations: 922.364 MB, 1.26% gc time)
+ 13.904713 seconds (17.84 M allocations: 921.802 MB, 1.18% gc time)
+running testcase:testcase7.txt
+ 12.954319 seconds (17.87 M allocations: 926.362 MB, 1.29% gc time)
+ 12.965325 seconds (17.84 M allocations: 925.764 MB, 1.25% gc time)
+ 12.975680 seconds (17.84 M allocations: 925.780 MB, 1.30% gc time)
+ 12.922352 seconds (17.87 M allocations: 926.439 MB, 1.34% gc time)
+ 12.965509 seconds (17.83 M allocations: 925.542 MB, 1.28% gc time)
+running testcase:testcase8.txt
+ 13.565890 seconds (17.91 M allocations: 940.676 MB, 1.24% gc time)
+ 13.561679 seconds (17.92 M allocations: 941.350 MB, 1.24% gc time)
+ 13.570204 seconds (17.97 M allocations: 942.165 MB, 1.32% gc time)
+ 13.519840 seconds (17.94 M allocations: 941.250 MB, 1.29% gc time)
+ 13.508187 seconds (17.93 M allocations: 941.163 MB, 1.31% gc time)
+running testcase:testcase9.txt
+ 15.610001 seconds (17.92 M allocations: 941.506 MB, 1.19% gc time)
+ 15.321888 seconds (17.96 M allocations: 942.819 MB, 1.19% gc time)
+ 15.326379 seconds (17.95 M allocations: 942.407 MB, 1.22% gc time)
+ 15.298808 seconds (17.94 M allocations: 942.232 MB, 1.21% gc time)
+ 15.326154 seconds (17.94 M allocations: 942.216 MB, 1.21% gc time)
+running testcase:testcase10.txt
+ 16.181655 seconds (17.95 M allocations: 949.966 MB, 1.21% gc time)
+ 16.084089 seconds (17.93 M allocations: 949.432 MB, 1.20% gc time)
+ 16.188455 seconds (17.96 M allocations: 950.215 MB, 1.23% gc time)
+ 16.122029 seconds (17.93 M allocations: 949.440 MB, 1.20% gc time)
+ 16.160458 seconds (17.92 M allocations: 949.245 MB, 1.22% gc time)
+running testcase:testcase11.txt
+ 21.619219 seconds (17.93 M allocations: 951.560 MB, 0.94% gc time)
+ 20.675556 seconds (17.97 M allocations: 952.878 MB, 1.02% gc time)
+ 20.761854 seconds (17.94 M allocations: 952.101 MB, 1.00% gc time)
+ 20.659420 seconds (17.98 M allocations: 953.295 MB, 1.16% gc time)
+ 20.754578 seconds (17.94 M allocations: 952.241 MB, 0.70% gc time)
+running testcase:testcase12.txt
+ 48.487195 seconds (17.93 M allocations: 1005.255 MB, 0.34% gc time)
+ 48.811893 seconds (17.98 M allocations: 1006.412 MB, 0.36% gc time)
+ 48.506433 seconds (17.97 M allocations: 1006.178 MB, 0.37% gc time)
+ 48.746656 seconds (17.96 M allocations: 1006.068 MB, 0.36% gc time)
+ 49.914901 seconds (17.96 M allocations: 1006.062 MB, 0.37% gc time)
+
+8 processes, Windows 10 build 14393, x86_64, shared kmeans
+ 
+running testcase:iris.txt
+ 34.753169 seconds (41.98 M allocations: 2.087 GB, 1.37% gc time)
+ 24.836797 seconds (35.24 M allocations: 1.801 GB, 1.48% gc time)
+ 24.820857 seconds (35.21 M allocations: 1.800 GB, 1.48% gc time)
+ 24.841587 seconds (35.22 M allocations: 1.801 GB, 1.46% gc time)
+ 26.041227 seconds (35.25 M allocations: 1.802 GB, 1.80% gc time)
+running testcase:testcase1.txt
+ 24.754062 seconds (35.23 M allocations: 1.801 GB, 1.12% gc time)
+ 24.763208 seconds (35.21 M allocations: 1.800 GB, 1.13% gc time)
+ 24.806260 seconds (35.23 M allocations: 1.801 GB, 1.16% gc time)
+ 24.821412 seconds (35.23 M allocations: 1.801 GB, 1.42% gc time)
+ 24.859590 seconds (35.22 M allocations: 1.801 GB, 1.08% gc time)
+running testcase:testcase2.txt
+ 24.816847 seconds (35.22 M allocations: 1.815 GB, 1.10% gc time)
+ 24.898273 seconds (35.23 M allocations: 1.815 GB, 1.11% gc time)
+ 24.765840 seconds (35.21 M allocations: 1.815 GB, 1.15% gc time)
+ 24.731671 seconds (35.24 M allocations: 1.815 GB, 1.20% gc time)
+ 24.797942 seconds (35.23 M allocations: 1.815 GB, 1.22% gc time)
+running testcase:testcase3.txt
+ 24.872134 seconds (35.24 M allocations: 1.815 GB, 1.24% gc time)
+ 25.970178 seconds (35.23 M allocations: 1.815 GB, 1.20% gc time)
+ 24.905326 seconds (35.25 M allocations: 1.816 GB, 1.24% gc time)
+ 24.976792 seconds (35.25 M allocations: 1.816 GB, 1.26% gc time)
+ 24.886638 seconds (35.20 M allocations: 1.815 GB, 1.26% gc time)
+running testcase:testcase4.txt
+ 24.914432 seconds (35.39 M allocations: 1.825 GB, 1.26% gc time)
+ 25.204457 seconds (35.40 M allocations: 1.825 GB, 1.28% gc time)
+ 25.188390 seconds (35.40 M allocations: 1.825 GB, 1.29% gc time)
+ 25.203128 seconds (35.45 M allocations: 1.826 GB, 1.61% gc time)
+ 25.492305 seconds (35.42 M allocations: 1.825 GB, 1.08% gc time)
+running testcase:testcase5.txt
+ 29.378155 seconds (35.39 M allocations: 1.816 GB, 0.98% gc time)
+ 26.216172 seconds (35.42 M allocations: 1.818 GB, 1.11% gc time)
+ 26.150887 seconds (35.41 M allocations: 1.818 GB, 1.15% gc time)
+ 26.882843 seconds (35.45 M allocations: 1.819 GB, 1.14% gc time)
+ 25.404855 seconds (35.44 M allocations: 1.818 GB, 1.20% gc time)
+running testcase:testcase6.txt
+ 25.984508 seconds (35.64 M allocations: 1.835 GB, 1.18% gc time)
+ 26.255925 seconds (35.65 M allocations: 1.835 GB, 1.18% gc time)
+ 26.719085 seconds (35.63 M allocations: 1.834 GB, 1.21% gc time)
+ 29.036625 seconds (35.65 M allocations: 1.835 GB, 1.14% gc time)
+ 26.202794 seconds (35.58 M allocations: 1.834 GB, 1.25% gc time)
+running testcase:testcase7.txt
+ 27.361686 seconds (35.62 M allocations: 1.842 GB, 1.24% gc time)
+ 31.142832 seconds (35.59 M allocations: 1.841 GB, 1.20% gc time)
+ 29.019363 seconds (35.60 M allocations: 1.841 GB, 1.30% gc time)
+ 27.053069 seconds (35.62 M allocations: 1.842 GB, 1.36% gc time)
+ 28.082384 seconds (35.65 M allocations: 1.842 GB, 1.34% gc time)
+running testcase:testcase8.txt
+ 27.240594 seconds (35.83 M allocations: 1.872 GB, 1.44% gc time)
+ 26.589063 seconds (35.84 M allocations: 1.872 GB, 1.58% gc time)
+ 26.413308 seconds (35.84 M allocations: 1.872 GB, 1.05% gc time)
+ 26.447146 seconds (35.83 M allocations: 1.872 GB, 1.06% gc time)
+ 26.476712 seconds (35.80 M allocations: 1.871 GB, 1.09% gc time)
+running testcase:testcase9.txt
+ 28.473909 seconds (35.81 M allocations: 1.872 GB, 1.10% gc time)
+ 28.557689 seconds (35.85 M allocations: 1.873 GB, 1.15% gc time)
+ 28.535259 seconds (35.83 M allocations: 1.873 GB, 1.13% gc time)
+ 28.457861 seconds (35.85 M allocations: 1.874 GB, 1.14% gc time)
+ 28.546715 seconds (35.86 M allocations: 1.874 GB, 1.14% gc time)
+running testcase:testcase10.txt
+ 29.178319 seconds (35.83 M allocations: 1.887 GB, 1.12% gc time)
+ 29.078013 seconds (35.87 M allocations: 1.888 GB, 1.13% gc time)
+ 28.651168 seconds (35.79 M allocations: 1.886 GB, 1.14% gc time)
+ 28.695463 seconds (35.80 M allocations: 1.886 GB, 1.20% gc time)
+ 28.776667 seconds (35.83 M allocations: 1.887 GB, 1.24% gc time)
+running testcase:testcase11.txt
+ 29.619843 seconds (35.85 M allocations: 1.890 GB, 1.20% gc time)
+ 29.564847 seconds (35.80 M allocations: 1.888 GB, 0.96% gc time)
+ 29.617649 seconds (35.85 M allocations: 1.890 GB, 0.98% gc time)
+ 29.595625 seconds (35.80 M allocations: 1.888 GB, 1.02% gc time)
+ 29.529893 seconds (35.83 M allocations: 1.889 GB, 1.03% gc time)
+running testcase:testcase12.txt
+ 47.193166 seconds (35.82 M allocations: 1.978 GB, 0.82% gc time)
+ 45.747334 seconds (35.84 M allocations: 1.979 GB, 0.66% gc time)
+ 45.695839 seconds (35.83 M allocations: 1.978 GB, 0.65% gc time)
+ 45.749876 seconds (35.79 M allocations: 1.977 GB, 0.67% gc time)
+ 45.794067 seconds (35.85 M allocations: 1.979 GB, 0.68% gc time)
