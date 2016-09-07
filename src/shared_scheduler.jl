@@ -63,8 +63,8 @@ function get_next_centres!{T<:AbstractFloat, N<:Integer}(worker_set::Vector{N},
                                        counts::SharedArray{N, 1},
                                        k::N, d::N, n::N)
   nw = length(dist)
-  fill!(sums, zero(eltype(sums)))
-  fill!(counts, zero(eltype(counts)))
+  fill!(sdata(sums), zero(eltype(sums)))
+  fill!(sdata(counts), zero(eltype(counts)))
   prefs = Array{Future}(nw)
   for w = 1 : nw
     prefs[w] = remotecall(next_iteration, worker_set[w], centres,

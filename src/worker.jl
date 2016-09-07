@@ -23,8 +23,8 @@ function next_iteration!{T<:AbstractFloat,N<:Integer}(centres::AbstractArray{T,2
   # k_range     the range of 'k', i.e. previous centres points to be used.
   # n_range     the range of 'n', i.e. data points to be used
                         
-  fill!(sums, zero(eltype(sums)))
-  fill!(counts, zero(eltype(counts)))
+  fill!(sdata(sums), zero(eltype(sums)))
+  fill!(sdata(counts), zero(eltype(counts)))
   
   d_range = Base.OneTo(size(data,1))
   l_dist::T = typemax(T)
