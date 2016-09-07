@@ -30,8 +30,8 @@ function kmeans{T<:AbstractFloat, N<:Integer}(data::SharedArray{T, 2},
   const assignments::SharedArray{N, 1} = SharedArray(N, (n...), init=false, pids=worker_set)
   const dist::SharedArray{UnitRange{N}, 1} = convert(SharedArray, Base.splitrange(n, length(worker_set)))
   const nw = length(dist)
-  const sums::SharedArray{T, 2} = SharedArray(T,(d,k),init=false, pids=worker_set)
-  const counts::SharedArray{N, 1} = SharedArray(N,(k...),init=false, pids=worker_set)
+  const sums::Array{T, 2} = Array{T}(d,k)
+  const counts::Array{N, 1} = Array{N}(k...)
   const prev_cents::SharedArray{T, 2} = SharedArray(T,(d,k),init=false)
   copy!(centres, init_centres)
   init_worker(length(dist),worker_set,T,N,d,k)
@@ -59,12 +59,12 @@ function get_next_centres!{T<:AbstractFloat, N<:Integer}(worker_set::Vector{N},
                                        dmat::SharedArray{T, 2},
                                        assignments::SharedArray{N, 1},
                                        dist::SharedArray{UnitRange{N}, 1},
-                                       sums::SharedArray{T, 2},
-                                       counts::SharedArray{N, 1},
+                                       sums::AbstractArray{T, 2},
+                                       counts::AbstractArray{N, 1},
                                        k::N, d::N, n::N)
   nw = length(dist)
-  fill!(sdata(sums), zero(eltype(sums)))
-  fill!(sdata(counts), zero(eltype(counts)))
+  fill!(sums, zero(eltype(sums)))
+  fill!(counts, zero(eltype(counts)))
   prefs = Array{Future}(nw)
   for w = 1 : nw
     prefs[w] = remotecall(next_iteration, worker_set[w], centres,
